@@ -7,6 +7,7 @@ public class Employee {
     }
     public static int getNextId() { return nextId; }
 
+
     private String firstName;
     private String lastName;
     private int dept;
