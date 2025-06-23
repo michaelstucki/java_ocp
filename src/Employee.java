@@ -1,18 +1,38 @@
 public class Employee {
-    private int id;
+    private static int nextId = 1;
+    private int id = nextId++;
+
+    public static void setNextId(int nextId) {
+        Employee.nextId = nextId;
+    }
+    public static int getNextId() { return nextId; }
+
     private String firstName;
     private String lastName;
     private int dept;
     private double payRate;
 
-    public Employee(String firstName, String lastName, int dept, double payRate) {
+    public Employee() {}
+
+    public Employee(String firstName, String lastName) {
         setFirstName(firstName);
         setLastName(lastName);
+    }
+
+    public Employee(String firstName, String lastName, int dept) {
+        this(firstName, lastName);
         setDept(dept);
+    }
+
+    public Employee(String firstName, String lastName, double payRate) {
+        this(firstName, lastName);
         setPayRate(payRate);
     }
 
-    public Employee() {}
+    public Employee(String firstName, String lastName, int dept, double payRate) {
+        this(firstName, lastName, dept);
+        setPayRate(payRate);
+    }
 
     public int getId() { return id; }
 
