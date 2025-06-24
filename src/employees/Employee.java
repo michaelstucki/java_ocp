@@ -1,5 +1,8 @@
 package employees;
 
+/**
+ * Models an employee
+ */
 public class Employee {
     private static int nextId = 1;
     private int id = nextId++;
@@ -15,12 +18,12 @@ public class Employee {
     private double payRate;
 
     /**
-     *  default constructor
+     *  constructor: default
      */
     public Employee() {}
 
     /**
-     * constructor
+     * constructor: first name, last name
      * @param firstName: employee's first name
      * @param lastName: employee's last name
      */
@@ -30,7 +33,7 @@ public class Employee {
     }
 
     /**
-     * constructor
+     * constructor: first name, last name, department number
      * @param firstName: employee's first name
      * @param lastName: employee's last name
      * @param dept: employee's department number
@@ -41,7 +44,7 @@ public class Employee {
     }
 
     /**
-     * constructor
+     * constructor: first name, last name, hourly pay rate
      * @param firstName: employee's first name
      * @param lastName: employee's last name
      * @param payRate: employee's hourly pay rate
@@ -52,7 +55,7 @@ public class Employee {
     }
 
     /**
-     * constructor
+     * constructor: first name, last name, department number, hourly pay rate
      * @param firstName: employee's first name
      * @param lastName: employee's last name
      * @param dept: employee's department number
@@ -64,67 +67,67 @@ public class Employee {
     }
 
     /**
-     *
+     * Get employee's ID
      * @return employee's ID
      */
     public int getId() { return id; }
 
     /**
-     *
+     * Get employee's first name
      * @return employee's first name
      */
     public String getFirstName() { return firstName; }
 
     /**
-     *
+     * Set employee's first name
      * @param firstName: employee's first name
      */
     public void setFirstName(String firstName) { this.firstName = firstName; }
 
     /**
-     *
+     * Get employee's last name
      * @return employee's last name
      */
     public String getLastName() { return lastName; }
 
     /**
-     *
+     * Set employee's last name
      * @param lastName: employee's last name
      */
     public void setLastName(String lastName) { this.lastName = lastName; }
 
     /**
-     *
+     * Get employee's department number
      * @return employee's department number
      */
     public int getDept() { return dept; }
 
     /**
-     *
+     * Set employee's department number
      * @param dept: employee's department number
      */
     public void setDept(int dept) { this.dept = dept; }
 
     /**
-     *
+     * Get employees hourly pay rate
      * @return employee's hourly pay rate
      */
     public double getPayRate() { return payRate; }
 
     /**
-     *
+     * Set employee's hourly pay rate
      * @param payRate: employee's hourly pay rate
      */
     public void setPayRate(double payRate) { this.payRate = payRate; }
 
     /**
-     *
+     * Get employee's full name
      * @return employee's full name
      */
     public String getFullName() { return firstName + " " + lastName; }
 
     /**
-     *
+     * Get employee's pay information
      * @return employee pay information
      */
     public String getPayInfo() {
