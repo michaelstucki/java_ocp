@@ -1,3 +1,8 @@
+import employees.*;
+import util.*;
+
+import java.security.Key;
+
 public class Payroll {
     public static void main(String[] args) {
         Employee.setNextId(22);
@@ -17,5 +22,12 @@ public class Payroll {
 
         Employee e4 = new Employee("Bill", "Meelater", 4);
         System.out.println(e4.getPayInfo());
+
+        String fName = KeyboardReader.getPromptedString("Enter first name: ");
+        String lName = KeyboardReader.getPromptedString("Enter last name: ");
+        int dept = KeyboardReader.getPromptedInt("Enter department: ");
+        double payRate = KeyboardReader.getPromptedDouble("Enter pay rate: ");
+        Employee e5 = new Employee(fName, lName, dept, payRate);
+        System.out.println(e5.getPayInfo());
     }
 }
