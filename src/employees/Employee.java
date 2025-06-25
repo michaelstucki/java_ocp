@@ -106,7 +106,9 @@ public class Employee {
      * Set employee's department number
      * @param dept: employee's department number
      */
-    public void setDept(int dept) { this.dept = dept; }
+    public void setDept(int dept) {
+        if (dept > 0) this.dept = dept;
+    }
 
     /**
      * Get employees hourly pay rate
@@ -118,7 +120,9 @@ public class Employee {
      * Set employee's hourly pay rate
      * @param payRate: employee's hourly pay rate
      */
-    public void setPayRate(double payRate) { this.payRate = payRate; }
+    public void setPayRate(double payRate) {
+        if (payRate >= 0) this.payRate = payRate;
+    }
 
     /**
      * Get employee's full name

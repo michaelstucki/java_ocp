@@ -25,9 +25,22 @@ public class Payroll {
 
         String fName = KeyboardReader.getPromptedString("Enter first name: ");
         String lName = KeyboardReader.getPromptedString("Enter last name: ");
+
         int dept = KeyboardReader.getPromptedInt("Enter department: ");
+        if (dept <= 0) {
+            System.out.println("department must be a positive integral!");
+            dept = 0;
+        }
+
         double payRate = KeyboardReader.getPromptedDouble("Enter pay rate: ");
+        if (payRate < 0) {
+            System.out.println("pay rate must be greater than zero!");
+            payRate = 0;
+        }
+
         Employee e5 = new Employee(fName, lName, dept, payRate);
         System.out.println(e5.getPayInfo());
+
+
     }
 }
