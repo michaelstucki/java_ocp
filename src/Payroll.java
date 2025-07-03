@@ -8,9 +8,9 @@ public class Payroll {
         // Get employees
         for (int i = 0; i < employees.length; i++) {
             // Get employee type
-            boolean validType = false;
-            char type;
             Employee e = null;
+            char type;
+            boolean validType = false;
             do {
                 type = KeyboardReader.getPromptedChar("Enter employee type: E[xempt], N[onexempt], C[ontract]");
                 validType = type == 'E' || type == 'e' ||
