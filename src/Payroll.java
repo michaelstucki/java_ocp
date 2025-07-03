@@ -7,8 +7,8 @@ public class Payroll {
 
         // Get employees
         for (int i = 0; i < employees.length; i++) {
-            // Get employee type
             Employee e = null;
+            // Get employee type
             char type;
             boolean validType = false;
             do {
