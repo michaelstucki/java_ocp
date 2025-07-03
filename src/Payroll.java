@@ -28,15 +28,15 @@ public class Payroll {
             int dept;
             do {
                 dept = KeyboardReader.getPromptedInt("Enter department: ");
-                if (dept <= 0) System.out.println("Department must be >= 0");
+                if (dept <= 0) System.out.println("Department must be > 0");
             } while (dept <= 0);
 
             // Get employee pay rate
             double payRate;
             do {
                 payRate = KeyboardReader.getPromptedDouble("Enter pay rate: ");
-                if (payRate < 0.0) System.out.println("Pay rate must be > 0.0");
-            } while (payRate < 0.0);
+                if (payRate <= 0.0) System.out.println("Pay rate must be > 0.0");
+            } while (payRate <= 0.0);
 
             // Get hours (non-exempt and contractor only)
             double hours = 0.0;
