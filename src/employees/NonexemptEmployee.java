@@ -1,6 +1,6 @@
 package employees;
 
-public class NonexemptEmployee extends ExemptEmployee {
+public class NonexemptEmployee extends Employee {
     private double hours;
 
     public NonexemptEmployee(String firstName, String lastName, int dept, double payRate, double hours) {
