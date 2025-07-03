@@ -61,7 +61,6 @@ public class Payroll {
         StringBuilder sbN = new StringBuilder();
         StringBuilder sbC = new StringBuilder();
 
-
         for (Employee e : employees) {
             if (e instanceof ExemptEmployee) sbE.append(e.getPayInfo()).append("\n");
             else if (e instanceof NonexemptEmployee) sbN.append(e.getPayInfo()).append("\n");
