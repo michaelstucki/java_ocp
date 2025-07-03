@@ -37,7 +37,7 @@ public class Payroll {
                 if (payRate <= 0.0) System.out.println("Pay rate must be > 0.0");
             } while (payRate <= 0.0);
 
-            // Get hours (non-exempt and contractor only)
+            // Create employee instances (nonexempt and contract need hours)
             double hours;
             switch (type) {
                 case 'E', 'e':
