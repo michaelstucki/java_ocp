@@ -1,5 +1,7 @@
 import employees.*;
+import finance.CheckPrinter;
 import util.*;
+import vendors.Invoice;
 
 public class Payroll {
     public static void main(String[] args) {
@@ -54,6 +56,7 @@ public class Payroll {
                 default:
             }
             employees[i] = e;
+            System.out.println(e.getPayInfo());
         }
 
         // Print employees by employee type
@@ -77,6 +80,17 @@ public class Payroll {
         System.out.println("Contract Employees");
         System.out.println("----------------");
         System.out.println(sbC.toString());
+
+        // Create array of Invoices
+        Invoice[] invoices = new Invoice[4];
+        invoices[0] = new Invoice("ABC Co.", 456.78);
+        invoices[1] = new Invoice("XYZ Co.", 1234.56);
+        invoices[2] = new Invoice("Hello, Inc.", 999.99);
+        invoices[3] = new Invoice("World, Ltd.", 0.43);
+
+        // Print payouts
+        CheckPrinter.printChecks(employees);
+        CheckPrinter.printChecks(invoices);
     }
 
     public static double getHours() {

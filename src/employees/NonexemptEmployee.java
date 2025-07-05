@@ -1,6 +1,8 @@
 package employees;
 
-public class NonexemptEmployee extends Employee {
+import finance.Payable;
+
+public class NonexemptEmployee extends Employee implements Payable {
     private double hours;
 
     public NonexemptEmployee(String firstName, String lastName, int dept, double payRate, double hours) {

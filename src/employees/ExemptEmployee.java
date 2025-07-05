@@ -1,6 +1,8 @@
 package employees;
 
-public class ExemptEmployee extends Employee {
+import finance.Payable;
+
+public class ExemptEmployee extends Employee implements Payable {
 
     public ExemptEmployee(String firstName, String lastName, int dept, double payRate) {
         super(firstName, lastName, dept, payRate);

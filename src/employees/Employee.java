@@ -1,6 +1,8 @@
 package employees;
 
-public abstract class Employee extends Person {
+import finance.Payable;
+
+public abstract class Employee extends Person implements Payable {
     private static int nextId = 1;
     private int id = nextId++;
     private int dept;

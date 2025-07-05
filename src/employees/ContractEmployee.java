@@ -1,6 +1,8 @@
 package employees;
 
-public class ContractEmployee extends Employee {
+import finance.Payable;
+
+public class ContractEmployee extends Employee implements Payable {
     private double hours;
 
     public ContractEmployee(String firstName, String lastName, int dept, double payRate, double hours) {
